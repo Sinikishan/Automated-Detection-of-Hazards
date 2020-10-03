@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import "./Map.css";
-var tilePath =
-  "wmts/epsg4326/best/MODIS_Aqua_CorrectedReflectance_TrueColor/default/2020-10-02/250m/{z}/{y}/{x}.jpg";
+var date = new Date().toISOString().slice(0, 10);
+var tilePath = `wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/${date}/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg`;
 mapboxgl.accessToken =
   "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA";
 
