@@ -1,0 +1,15 @@
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\todo}[1]{\red{TODO: #1}}
+
+\newcommand*{\helveticafont}{\fontfamily{phv}\selectfont}
+\DeclareTextFontCommand{\tweet}{\helveticafont}
+
+%%% Changed spacing above and below '\paragraph'
+\makeatletter
+\renewcommand{\paragraph}{%
+	\@startsection{paragraph}{4}%
+	{\z@}{1.50ex \@plus 1ex \@minus .2ex}{-1em}%
+	{\normalfont\normalsize\bfseries}%
+}
+\makeatother
