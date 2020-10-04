@@ -1,8 +1,3 @@
-#Author: Meylin Herrera
-#mhscience525@gmail.com / meylinh52@gmail.com
-#Description: Apply  k-means implementation (Shepherd  et  al.  (2019]) to segment satellite images and extract features
-#Input: satellite imagery
-#Output: atrributes tables with features statistics per segments
 
 import rsgislib
 from rsgislib import rastergis
