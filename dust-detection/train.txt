@@ -1,0 +1,2 @@
+python -m scripts.retrain --bottleneck_dir=tf_files/bottlenecks_dust --model_dir=tf_files/models/ --summaries_dir=tf_files/training_summaries/dust/"${ARCHITECTURE}" --output_graph=tf_files/dust.pb  --output_labels=tf_files/dust.txt --image_dir=tf_files/dust
+

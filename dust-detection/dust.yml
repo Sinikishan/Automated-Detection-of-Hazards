@@ -1,0 +1,8 @@
+name: dust
+channels:
+  - defaults
+dependencies:
+  - keras
+  - tensorflow-gpu=1.14
+  - pip: 
+    - pillow
