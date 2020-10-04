@@ -1,0 +1,8 @@
+yes_aug/
+no_aug/
+dust/
+ori_dust/
+models/
+bottlenecks_dust/
+training_summaries/
+dust.pb

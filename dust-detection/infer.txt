@@ -1,0 +1,1 @@
+python -m scripts.label_image --graph=tf_files/dust.pb  --image=tf_files/test/2.jpeg --labels=tf_files/dust.txt
