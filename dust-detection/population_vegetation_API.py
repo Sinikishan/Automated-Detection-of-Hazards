@@ -4,6 +4,10 @@ import requests
 import json
 import qwikidata
 import qwikidata.sparql
+import pandas as pd
+
+URL = "https://revgeocode.search.hereapi.com/v1/revgeocode"
+api_key = 'gD3tq83EmX8oHv6hA71NqJ37TYBfYoouAaJPDyfrTx0'
 
 def get_city_wikidata(city, country):
     query = """
@@ -27,8 +31,6 @@ def get_city_wikidata(city, country):
 
 
 def get_population(latitude,longitude):
-    URL = "https://revgeocode.search.hereapi.com/v1/revgeocode"
-    api_key = 'gD3tq83EmX8oHv6hA71NqJ37TYBfYoouAaJPDyfrTx0'
 
     PARAMS = {
                 'at': '{},{}'.format(latitude,longitude),
@@ -47,7 +49,28 @@ def get_population(latitude,longitude):
 
     return(result['population']['value'])
 
+def get_vegetation(latitude,longitude):
+    PARAMS = {
+                'at': '{},{}'.format(latitude,longitude),
+                'apikey': api_key
+            }
+
+    r = requests.get(url = URL, params = PARAMS) 
+
+    data = r.json()
+
+    country = data['items'][0]['address']['countryName']
+
+    xls = pd.ExcelFile("vegetation.xls")
+    sheet = xls.parse(0)
+    countries = sheet['Country']
+    forestIndex = sheet['2016']
+    for i in range(len(countries)):
+        if countries[i]==country:
+            return(forestIndex[i])
+
 print(get_population(12.9716,77.5946))
+print(get_vegetation(12.9716,77.5946))
 
 
 
