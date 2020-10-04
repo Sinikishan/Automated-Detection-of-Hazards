@@ -1,40 +1,58 @@
 import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import "./Map.css";
+
 var date = new Date().toISOString().slice(0, 10);
-var tilePath = `wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/${date}/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg`;
+var tilePathPopulation = `wmts/epsg3857/best/GPW_Population_Density_2020/default/${date}/GoogleMapsCompatible_Level7/{z}/{y}/{x}.png`;
+var tilePathGeneral = `wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/${date}/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg`;
 mapboxgl.accessToken =
-  "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA";
+  "pk.eyJ1IjoidGVhbWFudHJpa3NoIiwiYSI6ImNrZnQ3dHUxNjBwMjQycXBkNTB6Y2NidXYifQ.bJUa4zjIUDITAZLgc8hz2A";
 
 const Map = () => {
   const mapContainerRef = useRef(null);
-
+  let map;
   const [lng, setLng] = useState(5);
   const [lat, setLat] = useState(34);
   const [zoom, setZoom] = useState(1.5);
 
   // Initialize map when component mounts
   useEffect(() => {
-    const map = new mapboxgl.Map({
+    map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: {
         version: 8,
         sources: {
-          gibs: {
+          general: {
             type: "raster",
             tiles: [
-              "//gibs-a.earthdata.nasa.gov/" + tilePath,
-              "//gibs-b.earthdata.nasa.gov/" + tilePath,
-              "//gibs-c.earthdata.nasa.gov/" + tilePath,
+              "//gibs-a.earthdata.nasa.gov/" + tilePathGeneral,
+              "//gibs-b.earthdata.nasa.gov/" + tilePathGeneral,
+              "//gibs-c.earthdata.nasa.gov/" + tilePathGeneral,
+            ],
+            tileSize: 256,
+          },
+          population: {
+            type: "raster",
+            tiles: [
+              "//gibs-a.earthdata.nasa.gov/" + tilePathPopulation,
+              "//gibs-b.earthdata.nasa.gov/" + tilePathPopulation,
+              "//gibs-c.earthdata.nasa.gov/" + tilePathPopulation,
             ],
             tileSize: 256,
           },
         },
         layers: [
           {
-            id: "gibs",
+            id: "population",
             type: "raster",
-            source: "gibs",
+            source: "population",
+            minzoom: 0,
+            maxzoom: 10,
+          },
+          {
+            id: "general",
+            type: "raster",
+            source: "general",
             minzoom: 0,
             maxzoom: 10,
           },
@@ -57,11 +75,17 @@ const Map = () => {
     return () => map.remove();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+  const getPic = () => {
+    console.log(map.getCanvas().toDataURL("images/png"));
+    // window.open(map.getCanvas().toDataURL("image/jpeg"));
+  };
+
   return (
-    <div>
+    <div style={{ maxHeight: "50vh" }}>
       <div className="sidebarStyle">
         <div>
           Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
+          <button onClick={getPic}>Pic</button>
         </div>
       </div>
       <div className="map-container" ref={mapContainerRef} />
