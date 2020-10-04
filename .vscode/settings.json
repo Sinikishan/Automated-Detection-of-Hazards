@@ -1,4 +1,20 @@
 {
-	"python.dataScience.jupyterServerURI": "local",
-	"editor.formatOnSave": true
+  "python.dataScience.jupyterServerURI": "local",
+  "editor.formatOnSave": true,
+  "id": "general",
+  "type": "raster",
+  "source": {
+    "type": "raster",
+    "tiles": [
+      "//gibs-a.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/2020-10-03/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg",
+      "//gibs-b.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/2020-10-03/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg",
+      "//gibs-c.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/2020-10-03/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg"
+    ],
+    "tileSize": 256
+  },
+  "minzoom": 0,
+  "maxzoom": 10,
+  "layout": { "visibility": "visible" }
 }
+
+//https://api.mapbox.com/styles/v1/mapbox/light-v10/static/78.5059,20.9459,8.31,0/300x200?addlayer={%22id%22:%22general%22,%22type%22:%22raster%22,%22source-layer%22:%22water%22,%22source%22:{%22url%22:%22mapbox://mapbox.satellite%22,%22type%22:%22raster%22,%22tiles%22:[%22//gibs-a.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/2020-10-03/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg%22,%22//gibs-b.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/2020-10-03/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg%22,%22//gibs-c.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/2020-10-03/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg%22],%22tileSize%22:256},%22minzoom%22:0,%22maxzoom%22:10}&access_token=pk.eyJ1IjoidGVhbWFudHJpa3NoIiwiYSI6ImNrZnQ3dHUxNjBwMjQycXBkNTB6Y2NidXYifQ.bJUa4zjIUDITAZLgc8hz2A
