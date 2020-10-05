@@ -1,0 +1,22 @@
+acq_id;orbit_number;nominal_acquisition_start_time;nominal_acquisition_duration;intended_application;order_reference;purpose;project_name;radar_mode;beam_mode;polarization_type
+1063656;5918;2020-07-13 09:07:53.286+00;21.2110999999999983;Landslides;Call758_Japan;Emergency;International Charter;ScanSAR;Medium Resolution 30m;Dual Co/Cross Polarization
+1055907;5911;2020-07-12 21:18:42.753+00;21.6582000000000008;Landslides;Call758_Japan;Emergency;International Charter;ScanSAR;Medium Resolution 30m;Dual Co/Cross Polarization
+1028764;5859;2020-07-09 09:08:15.739+00;21.2098000000000013;Landslides;Call758_Japan;Emergency;International Charter;ScanSAR;Medium Resolution 30m;Dual Co/Cross Polarization
+1028277;5851;2020-07-08 21:18:31.461+00;21.6582000000000008;Landslides;Call758_Japan;Emergency;International Charter;ScanSAR;Medium Resolution 30m;Dual Co/Cross Polarization
+1087589;6000;2020-07-18 21:44:02.805+00;17.3127999999999993;Landslides;Call763_Indonesia;Emergency;International Charter;ScanSAR;Medium Resolution 30m;Dual HH-VV Polarization
+1087587;5993;2020-07-18 10:11:01.853+00;19.8597000000000001;Landslides;Call763_Indonesia;Emergency;International Charter;ScanSAR;Medium Resolution 30m;Dual HH-VV Polarization
+1087534;5985;2020-07-17 21:36:06.465+00;19.6880999999999986;Landslides;Call763_Indonesia;Emergency;International Charter;ScanSAR;Medium Resolution 30m;Dual HH-VV Polarization
+1100601;6023;2020-07-20 10:26:54.242+00;10.0600000000000005;Flood;Call763_Indonesia;Emergency;International Charter;Stripmap Burst;High Resolution 5m;Dual HH-VV Polarization
+1098219;6008;2020-07-19 10:18:57.452+00;14.4154999999999998;Flood;Call763_Indonesia;Emergency;International Charter;Stripmap Burst;High Resolution 5m;Dual HH-VV Polarization
+1248985;6360;2020-08-12 00:53:46.856+00;6.13070000000000004;Flood;Call766_India;Emergency;International Charter;Stripmap Burst;High Resolution 5m;Dual HH-VV Polarization
+1248983;6360;2020-08-12 00:51:33.709+00;11.7464999999999993;Flood;Call766_India;Emergency;International Charter;Stripmap Burst;High Resolution 5m;Dual HH-VV Polarization
+1248984;6353;2020-08-11 12:55:06.155+00;5.65190000000000037;Flood;Call766_India;Emergency;International Charter;Stripmap Burst;High Resolution 5m;Dual HH-VV Polarization
+1236190;6345;2020-08-11 00:45:48.387+00;5.90169999999999995;Flood;Call766_India;Emergency;International Charter;Stripmap Burst;High Resolution 5m;Dual HH-VV Polarization
+1235958;6339;2020-08-10 13:21:47.969+00;12.6709999999999994;Flood;Call766_India;Emergency;International Charter;Stripmap Burst;High Resolution 5m;Dual HH-VV Polarization
+1233281;6331;2020-08-10 01:07:50.832+00;11.9834999999999994;Flood;Call766_India;Emergency;International Charter;Stripmap Burst;High Resolution 5m;Dual HH-VV Polarization
+1233283;6330;2020-08-10 00:37:51.288+00;6.76440000000000019;Flood;Call766_India;Emergency;International Charter;Stripmap Burst;High Resolution 5m;Dual HH-VV Polarization
+1233282;6324;2020-08-09 13:11:24.825+00;5.85459999999999958;Flood;Call766_India;Emergency;International Charter;Stripmap Burst;High Resolution 5m;Dual HH-VV Polarization
+1233280;6324;2020-08-09 13:13:50.538+00;12.4649999999999999;Flood;Call766_India;Emergency;International Charter;Stripmap Burst;High Resolution 5m;Dual HH-VV Polarization
+1282695;6422;2020-08-16 03:33:48.196+00;7.04520000000000035;Flood;Call769_Sudan;Emergency;International Charter;Stripmap Continuous;High Resolution 5m;Dual Co/Cross Polarization
+1293502;6445;2020-08-17 15:53:48.443+00;6.85709999999999997;Flood;Call769_Sudan;Emergency;International Charter;Stripmap Continuous;High Resolution 5m;Dual Co/Cross Polarization
+1293501;6437;2020-08-17 03:41:45.352+00;6.91669999999999963;Flood;Call769_Sudan;Emergency;International Charter;Stripmap Continuous;High Resolution 5m;Dual Co/Cross Polarization
